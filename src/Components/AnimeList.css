@@ -1,0 +1,127 @@
+/* AnimeList.css */
+
+.anime-list-container {
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.8); /* Semi-transparent background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide overflow to prevent scrolling bars */
+  }
+  
+  .anime-list-container h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .anime-list-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    width: max-content; /* Allow width to expand based on content */
+    animation: scroll-left 20s linear infinite; /* Add the animation */
+  }
+  
+  .anime-list-grid.paused {
+    animation-play-state: paused; /* Pause the animation when class is added */
+  }
+  
+  .anime-list-grid .anime-card {
+    min-width: 250px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent card background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .anime-list-grid .anime-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Keyframes for smooth scrolling */
+  @keyframes scroll-left{
+    0% {
+      transform: translateX(30%); /* Start from right */
+    }
+    100% {
+      transform: translateX(-100%); /* End at left */
+    }
+  }
+  
+  /* Media Queries for Anime List Responsiveness */
+
+/* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+  .anime-list-container {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .anime-list-container h1 {
+    font-size: 2rem; /* Decrease header font size */
+  }
+
+  .anime-list-grid {
+    gap: 15px; /* Reduce gap between cards */
+  }
+
+  .anime-list-grid .anime-card {
+    min-width: 200px; /* Reduce minimum width of cards */
+  }
+}
+
+/* For screens smaller than 992px */
+@media (max-width: 992px) {
+  .anime-list-grid {
+    flex-wrap: wrap; /* Allow wrapping of anime cards */
+    width: 100%; /* Set width to 100% */
+    animation: none; /* Disable animation for better performance */
+  }
+
+  .anime-list-container {
+    min-height: auto; /* Allow height to adjust based on content */
+  }
+
+  .anime-list-container h1 {
+    font-size: 1.8rem; /* Further decrease header font size */
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .anime-list-container {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .anime-list-container h1 {
+    font-size: 1.5rem; /* Further decrease header font size */
+    margin-bottom: 15px; /* Reduce bottom margin */
+  }
+
+  .anime-list-grid .anime-card {
+    min-width: 150px; /* Further reduce minimum width of cards */
+  }
+}
+
+/* For screens smaller than 576px */
+@media (max-width: 576px) {
+  .anime-list-container {
+    padding: 5px; /* Minimum padding for small screens */
+  }
+
+  .anime-list-container h1 {
+    font-size: 1.2rem; /* Decrease header font size significantly */
+  }
+
+  .anime-list-grid {
+    gap: 10px; /* Further reduce gap between cards */
+  }
+
+  .anime-list-grid .anime-card {
+    min-width: 100%; /* Set cards to take full width */
+    box-shadow: none; /* Remove shadow for mobile */
+  }
+}

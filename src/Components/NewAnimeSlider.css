@@ -1,0 +1,100 @@
+/* NewAnimeSlider.css */
+
+.new-anime-slider {
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  padding: 20px 0;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  /* Ensuring smooth sliding with transition */
+}
+
+.slide {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 200px;
+  max-width: 250px;
+  flex: 0 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #444;
+}
+
+.anime-info {
+  padding: 15px;
+  color: #fff;
+}
+
+.anime-info h4 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #f5f5f5;
+}
+
+.anime-info p {
+  font-size: 0.9em;
+  color: #cccccc;
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.watch-btn,
+.detail-btn {
+  flex: 1;
+  padding: 8px 12px;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.watch-btn:hover {
+  background-color: #ff4500;
+}
+
+.detail-btn:hover {
+  background-color: #1e90ff;
+}
+
+/* Additional controls (optional for next/prev buttons) */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.slider-button.prev {
+  left: 10px;
+}
+
+.slider-button.next {
+  right: 10px;
+}

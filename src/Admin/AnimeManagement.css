@@ -1,0 +1,105 @@
+.anime-management {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .h1class {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .h2class {
+    margin-top: 20px;
+  }
+  
+  .formclass {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  input[type='text'],
+  input[type='number'] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .buttonclass {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .buttonclass:hover {
+    background-color: #0056b3;
+  }
+
+.button-container {
+  display: flex; /* Use flexbox for button layout */
+  gap: 10px; /* Space between buttons */
+}
+
+.buttoneditclass,
+.buttondelclass {
+  padding: 8px 12px; /* Add padding for buttons */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer cursor for buttons */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.buttoneditclass {
+  background-color: #007bff; /* Blue color for update button */
+}
+
+.buttoneditclass:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.buttondelclass {
+  background-color: #dc3545; /* Red color for delete button */
+}
+
+.buttondelclass:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+  
+.ulclass {
+  list-style-type: none;
+  padding: 0;
+}
+  
+.ulclass .liclass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  
+  /* .ulclass .liclass:hover {
+    background-color: #f1f1f1;
+  } 
+  
+  .ulclass .liclass button { */
+    /* background-color: #dc3545; /* Delete button color */
+  /* } 
+  
+  .ulclass .liclass button:hover {
+    background-color: #c82333; /* Delete button hover color */
+  /* } */
+   

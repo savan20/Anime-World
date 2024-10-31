@@ -1,0 +1,53 @@
+/* DeleteAnime.css */
+
+.delete-anime-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #e74c3c;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Delete button styling */
+  .delete-btn {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Cancel button styling */
+  .cancel-btn {
+    background-color: #7f8c8d;
+    color: #fff;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #5a6d6d;
+  }
+  

@@ -1,0 +1,214 @@
+/* AnimeCard.css */
+
+.anime-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  background-color: #6f6b6b;
+}
+
+.anime-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.anime-image {
+  margin-top: 20px;
+  background-size: 160px;
+  background-position: center;
+  background-repeat: no-repeat;    height: 250px;
+  width: 100%;
+  padding-top: 10px;
+  transition: transform 0.5s ease;
+}
+
+.anime-card:hover .anime-image {
+  transform: scale(1.1);
+}
+
+.anime-details {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff 80%);
+}
+
+.anime-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  transition: color 0.3s;
+}
+
+.anime-card:hover .anime-name {
+  color: #ff5f6d;
+}
+
+.anime-info1 {
+  margin: 4px 0;
+  color: #666;
+  position: static;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.anime-card:hover .anime-info {
+  color: #000000;
+}
+
+.anime-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.watch-now-btn,
+.add-to-list-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.watch-now-btn {
+  background-image: linear-gradient(45deg, #ff5f6d, #ffc371);
+  color: #ffffff;
+}
+
+.add-to-list-btn {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.watch-now-btn:hover {
+  background-image: linear-gradient(45deg, #ff3b52, #ff9a7b);
+  transform: translateY(-2px);
+}
+
+.add-to-list-btn:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+.video-container {
+  margin-top: 16px;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Media Queries for Anime Card Responsiveness */
+
+/* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+  .anime-card {
+    width: 250px; /* Reduce width for smaller screens */
+    margin: 12px; /* Adjust margin */
+  }
+
+  .anime-name {
+    font-size: 20px; /* Decrease font size */
+  }
+
+  .anime-info1 {
+    font-size: 12px; /* Reduce info font size */
+  }
+
+  .watch-now-btn,
+  .add-to-list-btn {
+    font-size: 12px; /* Reduce button font size */
+  }
+}
+
+/* For screens smaller than 992px */
+@media (max-width: 992px) {
+  .anime-card {
+    width: 220px; /* Further reduce width */
+  }
+
+  .anime-name {
+    font-size: 18px; /* Decrease font size further */
+  }
+
+  .anime-info1 {
+    font-size: 11px; /* Further reduce info font size */
+  }
+
+  .anime-actions {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .watch-now-btn,
+  .add-to-list-btn {
+    width: 100%; /* Make buttons full width */
+    margin-bottom: 8px; /* Add space between buttons */
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .anime-card {
+    width: 100%; /* Full width for mobile */
+    margin: 8px 0; /* Adjust margin */
+  }
+
+  .anime-name {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .anime-info1 {
+    font-size: 10px; /* Further reduce info font size */
+  }
+
+  .watch-now-btn,
+  .add-to-list-btn {
+    padding: 8px 12px; /* Adjust padding for buttons */
+  }
+}
+
+/* For screens smaller than 576px */
+@media (max-width: 576px) {
+  .anime-card {
+    margin: 4px; /* Minimum margin */
+  }
+
+  .anime-name {
+    font-size: 14px; /* Decrease font size significantly */
+  }
+
+  .anime-info1 {
+    font-size: 9px; /* Decrease info font size */
+  }
+
+  .watch-now-btn,
+  .add-to-list-btn {
+    font-size: 10px; /* Further reduce button font size */
+    padding: 6px 10px; /* Adjust button padding */
+  }
+}

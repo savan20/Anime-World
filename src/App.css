@@ -1,0 +1,200 @@
+/* App.css */
+
+/* Container for the sidebar and main content */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+/* Main content area next to the sidebar */
+.main-content {
+  margin-left: 250px; /* Space for the sidebar */
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles for the anime card list */
+.anime-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.App1 {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  display: flex;
+  background-color: transparent;
+}
+
+.content {
+  flex-grow: 1;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer {
+  background-color: #1a1a1d;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  width: calc(100% - 250px); /* Adjust width for the sidebar */
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+  color: #f39c12; /* Change color on hover */
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+/* 
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+ /* App.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+  .app-container {
+    flex-direction: column; /* Stack sidebar and main content */
+  }
+  
+  .main-content {
+    margin-left: 0; /* Remove sidebar margin */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .footer {
+    width: 100%; /* Full width for footer */
+  }
+}
+
+/* For screens smaller than 992px */
+@media (max-width: 992px) {
+  .anime-list {
+    flex-direction: column; /* Stack anime cards vertically */
+    align-items: center; /* Center align cards */
+  }
+
+  .social-icons {
+    flex-direction: column; /* Stack social icons vertically */
+    align-items: center; /* Center align icons */
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 10px; /* Adjust footer content padding */
+  }
+
+  .social-icon {
+    font-size: 18px; /* Smaller icons on mobile */
+  }
+}
+
+/* For screens smaller than 576px */
+@media (max-width: 576px) {
+  .anime-list {
+    gap: 10px; /* Reduce gap between cards */
+  }
+
+  .main-content {
+    padding: 5px; /* Smaller padding */
+  }
+
+  .footer {
+    padding: 15px 0; /* Adjust footer padding */
+  }
+
+  .social-icon {
+    font-size: 16px; /* Even smaller icons on smaller devices */
+  }
+}
+
+

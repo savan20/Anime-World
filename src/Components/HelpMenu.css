@@ -1,0 +1,97 @@
+/* HelpMenu.css */
+.help-menu-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .help-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .faq-section h2 {
+    font-size: 1.8rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  .faq-item h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    background-color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-item h3:hover {
+    background-color: #d5dde3;
+  }
+  
+  .faq-answer {
+    padding: 0.8rem;
+    background-color: #f5f5f5;
+    border-left: 4px solid #3498db;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+  }
+  
+  .contact-section h2 {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    color: #e67e22;
+  }
+  
+  .contact-section p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #34495e;
+  }
+  
+  .contact-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-section ul li {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-section ul li a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .contact-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries for responsive design */
+  @media (max-width: 768px) {
+    .help-menu-container {
+      padding: 1rem;
+    }
+  
+    .help-title {
+      font-size: 2rem;
+    }
+  
+    .faq-item h3 {
+      font-size: 1rem;
+    }
+  }
+  

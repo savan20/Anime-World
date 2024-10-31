@@ -1,0 +1,23 @@
+/* LandingPage.css */
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+   
+  }
+  
+  .feature {
+    text-align: center;
+  }
+  
+  .feature-image {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  .feature-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

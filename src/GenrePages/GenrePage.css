@@ -1,0 +1,111 @@
+/* src/GenrePages/GenrePage.css */
+.genre-page {
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.genre-header {
+  padding: 20px;
+  text-align: center;
+}
+
+.genre-header h1 {
+  font-size: 2.5em;
+  color: #765298;
+  font-size: 35px;
+  font-weight: 800;
+  font-family: 'Georgia', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #ffffff, rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0; /* Start invisible */
+  transform: translateY(30px); /* Start below and slide up */
+  animation: slideInFade 1.5s ease-out forwards;
+}
+
+/* Optional animation for the paragraph */
+.genre-header p {
+  font-size: 1.2em;
+  color: white;
+  opacity: 0;
+  animation: fadeInText 1s ease-out 1.2s forwards;
+}
+
+/* Keyframes for sliding in the h1 */
+@keyframes slideInFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect at start */
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Softer shadow at the end */
+  }
+}
+/* Optional fade-in effect for the paragraph text */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.anime-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Anime Card CSS with Fade-in Animation */
+.anime-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+  margin: 15px;
+  /* Add additional styling for your anime cards here */
+}
+
+/* Image styling to make all images the same size */
+.anime-card img {
+  width: 200px; /* Set the width you want */
+  height: 300px; /* Set the height you want */
+  object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
+  border-radius: 10px; /* Optional: add rounded corners */
+}
+
+/* Animation keyframes for fade-in effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay animation for each card for staggered effect */
+.anime-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.anime-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.anime-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+/* Continue for more cards */
